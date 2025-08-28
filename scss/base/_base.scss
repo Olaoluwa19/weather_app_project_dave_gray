@@ -1,3 +1,6 @@
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
+
 * {
   margin: 0;
   padding: 0;
@@ -5,13 +8,13 @@
 }
 
 html {
-  background-color: $background-color;
+  background-color: colors.$background-color;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
-  color: $font-color;
-  @include mq(768px) {
+  color: colors.$font-color;
+  @include mixins.mq(768px) {
     font-size: 22px;
   }
 }
@@ -19,7 +22,7 @@ html {
 body {
   width: 100%;
   min-height: 100vh;
-  @include flexCenter;
+  @include mixins.flexCenter;
   flex-direction: column;
   padding: 0.5rem;
 }
@@ -31,11 +34,11 @@ main {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  color: $font-color;
-  background-color: $mask-color;
-  border: 1px solid $border-color;
+  color: colors.$font-color;
+  background-color: colors.$mask-color;
+  border: 1px solid colors.$border-color;
   border-radius: 10px;
-  box-shadow: 1px 1px 2.5px $shadow-color;
+  box-shadow: 1px 1px 2.5px colors.$shadow-color;
 }
 
 img {
@@ -45,7 +48,7 @@ img {
 hr {
   width: 90%;
   margin: auto;
-  border: 1px solid $border-color;
+  border: 1px solid colors.$border-color;
 }
 
 .none {

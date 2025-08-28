@@ -1,7 +1,9 @@
-@import "abstracts/colors";
-@import "abstracts/mixins";
-@import "base/base";
-@import "components/a11y";
-@import "components/buttons";
-@import "layout/searchBar";
-@import "layout/navButtons";
+@use "abstracts/colors";
+@use "abstracts/mixins";
+@use "base/base";
+@use "components/a11y";
+@use "components/buttons";
+@use "layout/searchBar";
+@use "layout/navButtons";
+@use "layout/currentForecast";
+@use "layout/dailyForecast";

@@ -1,6 +1,8 @@
+@use "../abstracts/mixins";
+
 .navButtons {
   flex-grow: 1;
-  @include flexCenter;
+  @include mixins.flexCenter;
   justify-content: space-evenly;
   padding: 0.5rem 0.25rem;
 }

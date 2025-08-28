@@ -1,14 +1,17 @@
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
+
 .button {
   min-width: 48px;
   min-height: 48px;
-  color: $button-textcolor;
-  border: 2px solid $border-color;
+  color: colors.$button-textcolor;
+  border: 2px solid colors.$border-color;
   border-radius: 80px;
   outline: none;
   font-size: 1.25rem;
   font-weight: 900;
-  background-color: $button-color;
-  @include mq(768px) {
+  background-color: colors.$button-color;
+  @include mixins.mq(768px) {
     font-size: 1.5rem;
     min-width: 64px;
     min-height: 64px;
@@ -21,6 +24,6 @@
 
 .button:hover,
 .button :focus {
-  box-shadow: 4px 2px 5px $text-shadow-color;
-  border-color: $font-color;
+  box-shadow: 4px 2px 5px colors.$text-shadow-color;
+  border-color: colors.$font-color;
 }

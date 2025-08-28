@@ -1,3 +1,5 @@
+@use "../abstracts/colors";
+
 .offscreen {
   position: absolute;
   left: -10000px;
@@ -7,10 +9,10 @@
   position: absolute;
   top: -999px;
   left: 0;
-  background: $text-shadow-color;
+  background: colors.$text-shadow-color;
   padding: 14px;
   z-index: 1;
-  color: $font-color;
+  color: colors.$font-color;
 }
 
 .skip-link:focus,

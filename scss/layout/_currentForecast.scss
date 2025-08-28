@@ -1,0 +1,13 @@
+@use "../abstracts/mixins";
+
+.currentForecast {
+  .currentForecast__location {
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 1rem;
+    @include mixins.mq(768px) {
+      font-size: 1.3rem;
+    }
+  }
+}
