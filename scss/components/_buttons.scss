@@ -23,7 +23,7 @@
 }
 
 .button:hover,
-.button :focus {
+.button:focus {
   box-shadow: 4px 2px 5px colors.$text-shadow-color;
   border-color: colors.$font-color;
 }
