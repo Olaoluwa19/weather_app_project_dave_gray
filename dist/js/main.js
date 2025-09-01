@@ -1,6 +1,8 @@
 import {
+  setPlaceHolderText,
   addSpinner,
   displayError,
+  displayApiError,
   updateScreenReaderConfirmation,
 } from "./domFunctions.js";
 import {
@@ -27,6 +29,7 @@ const initApp = () => {
   const locationEntry = document.getElementById("searchBar__form");
   locationEntry.addEventListener("submit", submitNewLocation);
   // set up
+  setPlaceHolderText();
   // load weather
   loadWeather();
 };
@@ -129,6 +132,15 @@ const submitNewLocation = async (event) => {
   const locationIcon = document.querySelector(".fa-search");
   addSpinner(locationIcon);
   const coordsData = await getCoordsFromApi(entryText, currentLoc.getUnit());
+
+  if (coordsData.cod === 200) {
+    // work with api data
+    const myCoordsObj = {};
+    setLocationObject(currentLoc, myCoordsObj);
+    updateDataAndDisplay(currentLoc);
+  } else {
+    displayApiError(coordsData);
+  }
 };
 
 const updateDataAndDisplay = async (locationObj) => {
