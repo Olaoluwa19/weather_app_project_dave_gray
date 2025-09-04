@@ -1,2 +1,0 @@
-npm install -g sass-migrator
-sass-migrator --migrate-deps module scss/main.scss
