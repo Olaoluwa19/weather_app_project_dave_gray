@@ -20,5 +20,8 @@
   "homepage": "https://github.com/Olaoluwa19/weather_app_project_dave_gray#readme",
   "dependencies": {
     "dotenv": "^17.2.1"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^8.1.1"
   }
 }
