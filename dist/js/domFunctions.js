@@ -43,3 +43,40 @@ const updateWeatherLocationHeader = (message) => {
 export const updateScreenReaderConfirmation = (message) => {
   document.getElementById("confirmation").textContent = message;
 };
+
+export const updateDisplay = (weatherJson, locationObj) => {
+  fadeDisplay();
+  clearDisplay();
+  const weatherClass = getWeatherClass(weatherJson.current.weather[0].icon);
+  fadeDisplay();
+};
+
+const fadeDisplay = () => {
+  const cc = document.getElementById("currentForecast");
+  cc.classList.toggle("zero-vis");
+  cc.classList.toggle("fade-in");
+  const sixDay = document.getElementById("dailyForecast");
+  sixDay.classList.toggle("zero-vis");
+  sixDay.classList.toggle("fade-in");
+};
+
+const clearDisplay = () => {
+  const currentConditions = document.getElementById(
+    "currentForecast__conditions"
+  );
+  deleteContents(currentConditions);
+  const sixDayForecast = document.getElementById("dailyForecast__contents");
+  deleteContents(sixDayForecast);
+};
+
+const deleteContents = (parentElement) => {
+  let child = parentElement.lastElementChild;
+  while (child) {
+    parentElement.removeChild(child);
+    child = parentElement.lastElementChild;
+  }
+};
+
+const getWeatherClass = (icon) => {
+  // 3:34:26
+};

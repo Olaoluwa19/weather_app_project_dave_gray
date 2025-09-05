@@ -1,4 +1,4 @@
-import WEATHER_API_KEY from "./config.js";
+import { WEATHER_API_KEY } from "./config.js";
 
 export const setLocationObject = (locationObj, coordsObj) => {
   const { lat, lon, name, unit } = coordsObj;
@@ -10,6 +10,21 @@ export const setLocationObject = (locationObj, coordsObj) => {
 
 export const getHomeLocation = () => {
   return localStorage.getItem("defaultWeatherLocation");
+};
+
+export const getWeatherFromCoords = async (locationObj) => {
+  const lat = locationObj.getLat();
+  const lon = locationObj.getLon();
+  const units = locationObj.getUnit();
+  const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=${units}&appid=${WEATHER_API_KEY}`;
+  try {
+    const weatherStream = await fetch(url);
+    const weatherJson = await weatherStream.json();
+    console.log(weatherJson);
+    return weatherJson;
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 export const getCoordsFromApi = async (entryText, units) => {
