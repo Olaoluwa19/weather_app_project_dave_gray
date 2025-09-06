@@ -4,6 +4,7 @@ import {
   displayError,
   displayApiError,
   updateScreenReaderConfirmation,
+  updateDisplay,
 } from "./domFunctions.js";
 import {
   setLocationObject,
