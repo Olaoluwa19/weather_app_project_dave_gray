@@ -60,6 +60,7 @@ export const updateDisplay = (weatherJson, locationObj) => {
     weatherJson,
     locationObj.getUnit()
   );
+  displayCurrentConditions(ccArray);
   //six day forecast
 
   setFocusOnSearch();
@@ -249,4 +250,11 @@ const translateIconToFontAwesome = () => {
       i.classList.add("far", "fa-question-circle");
   }
   return i;
+};
+
+const displayCurrentConditions = (currentConditionsArray) => {
+  const ccContainer = document.getElementById("currentForecast__conditions");
+  currentConditionsArray.forEach((cc) => {
+    ccContainer.appendChild(cc);
+  });
 };
