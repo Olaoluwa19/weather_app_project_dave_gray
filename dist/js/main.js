@@ -59,7 +59,7 @@ const geoSuccess = (position) => {
   const myCoordsObj = {
     lat: position.coords.latitude,
     lon: position.coords.longitude,
-    name: `Lat: ${position.coords.latitude} Long: ${position.coords.longitude}`,
+    name: `Lat:${position.coords.latitude} Long:${position.coords.longitude}`,
   };
   setLocationObject(currentLoc, myCoordsObj);
   updateDataAndDisplay(currentLoc);
