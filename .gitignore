@@ -5,3 +5,5 @@ note.txt
 */note.txt
 .vscode
 config.js
+# Local Netlify folder
+.netlify
