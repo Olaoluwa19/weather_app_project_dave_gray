@@ -18,10 +18,6 @@
     "url": "https://github.com/Olaoluwa19/weather_app_project_dave_gray/issues"
   },
   "homepage": "https://github.com/Olaoluwa19/weather_app_project_dave_gray#readme",
-  "dependencies": {
-    "dotenv": "^17.2.1",
-    "node-fetch": "^3.3.2"
-  },
   "devDependencies": {
     "dotenv-webpack": "^8.1.1"
   }
