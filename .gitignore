@@ -7,3 +7,4 @@ note.txt
 config.js
 # Local Netlify folder
 .netlify
+serverless/get_weather1.js
